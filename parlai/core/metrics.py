@@ -192,6 +192,23 @@ class FixedMetric(Metric):
         return self._value
 
 
+class TextMetric(Metric):
+    def __init__(self, value: str):
+        self._value = value
+
+    def value(self) -> str:
+        return self._value
+
+    def __add__(self, other: Any) -> Any:
+        return None
+
+    def __str__(self) -> str:
+        return self.value()
+
+    def __repr__(self) -> str:
+        return f'{self.__class__.__name__}({self.value()})'
+
+
 class SumMetric(Metric):
     """
     Class that keeps a running sum of some metric.

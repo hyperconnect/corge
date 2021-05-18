@@ -5,6 +5,14 @@ python parlai/scripts/eval_model.py \
     -dt test \
     -mf ${1} \
     --fixed-candidates-path ${FIXED_CANDIDATE_PATH} \
+    --load-candidate-encs true \
+    --load-candidate-encs-path ./fixed_candidates.encs.npy \
+    --save-candidate-encs-path ./fixed_candidates.encs.npy \
+    --load-candidate-vecs true \
+    --load-candidate-retriever-vecs-path ./fixed_candidates_retriever.vecs.npy \
+    --save-candidate-retriever-vecs-path ./fixed_candidates_retriever.vecs.npy \
+    --load-candidate-generator-vecs-path ./fixed_candidates_generator.vecs.npy \
+    --save-candidate-generator-vecs-path ./fixed_candidates_generator.vecs.npy \
     --inference beam \
     --beam-size 10 \
     --beam-min-length 20 \

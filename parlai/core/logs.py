@@ -20,6 +20,7 @@ import json
 import numbers
 from parlai.core.opt import Opt
 from parlai.core.metrics import Metric
+from parlai.core.metrics import TextMetric
 from parlai.utils.io import PathManager
 import parlai.utils.logging as logging
 
@@ -87,6 +88,8 @@ class TensorboardLogger(object):
         for k, v in report.items():
             if isinstance(v, numbers.Number):
                 self.writer.add_scalar(f'{k}/{setting}', v, global_step=step)
+            elif isinstance(v, TextMetric):
+                self.writer.add_text(f'{k}/{setting}', v.value(), global_step=step)
             elif isinstance(v, Metric):
                 self.writer.add_scalar(f'{k}/{setting}', v.value(), global_step=step)
             else:

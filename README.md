@@ -1,6 +1,6 @@
 # Understanding and Improving the Exemplar-based Generation for Open-domain Conversation
 
-Code for the paper: "Understanding and Improving the Exemplar-based Generation for Open-domain Conversation", annonymous EMNLP 2021 submission.
+Code for the paper: "Understanding and Improving the Exemplar-based Generation for Open-domain Conversation", which is presented in ACL 2022, 4th Workshop on NLP for ConvAI as an oral paper.
 Our implementation is based on [ParlAI](https://github.com/facebookresearch/ParlAI), so before you start we recommend you to read the README of ParlAI and prepare for the experimental setting.
 You can see our implementations in `parlai/agents/transformer/corge.py` and `parlai/agents/transformer/exemplar_based_generator.py`.
 
@@ -29,6 +29,8 @@ export FIXED_CANDIDATE_PATH=[];
 
 ./scripts/eval_model.sh [MODEL_PATH];
 ```
+
+We also provided the automatic evaulation scripts in [jupyter notebook](https://github.com/hyperconnect/corge/blob/master/scripts/automatic_evaluations.ipynb).
 
 ## Get Inference Results from the Exemplar-based Generator
 

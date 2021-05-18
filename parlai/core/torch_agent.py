@@ -111,6 +111,10 @@ class Batch(AttrDict):
     candidate_vecs: Optional[List[List[torch.LongTensor]]]
     image: Optional[List[Any]]
     observations: Optional[List[Message]]
+    retriever_text_vec: Optional[torch.LongTensor]
+    retriever_text_lengths: Optional[List[int]]
+    retriever_label_vec: Optional[torch.LongTensor]
+    retriever_label_lengths: Optional[List[int]]
 
     def __init__(
         self,

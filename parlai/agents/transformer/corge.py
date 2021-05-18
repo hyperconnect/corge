@@ -134,7 +134,6 @@ class CorgeAgent(TransformerGeneratorAgent):
         agent.add_argument('--save-candidate-retriever-vecs-path', type=str, default=None)
         agent.add_argument('--save-candidate-generator-vecs-path', type=str, default=None)
         agent.add_argument('--save-generated-samples', type=bool, default=True,
-
                            help='Option to save generated responses from the model after inference.')
         agent.add_argument('--generation-result-path', type=str,
                            help='Where to save the generated responses.')

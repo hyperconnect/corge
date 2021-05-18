@@ -404,8 +404,15 @@ def nice_report(report) -> str:
     if not report:
         return ""
 
-    from parlai.core.metrics import Metric
+    from parlai.core.metrics import Metric, TextMetric
 
+    new_report = {}
+    for k, v in report.items():
+        if isinstance(v, TextMetric):
+            continue
+        new_report[k] = v.value() if isinstance(v, Metric) else v
+
+    report = new_report
     try:
         import pandas as pd
 
