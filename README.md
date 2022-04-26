@@ -40,3 +40,16 @@ export FIXED_CANDIDATE_PATH=[];
 
 ./scripts/inference_model.sh [MODEL_PATH];
 ```
+
+## Citation
+
+If you find our paper or this project helps your research, please kindly consider citing our paper in your publications.
+
+```
+@article{han2021understanding,
+  title={Understanding and Improving the Exemplar-based Generation for Open-domain Conversation},
+  author={Han, Seungju and Kim, Beomsu and Seo, Seokjun and Erdenee, Enkhbayar and Chang, Buru},
+  journal={arXiv preprint arXiv:2112.06723},
+  year={2021}
+}
+```
